@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: url('https://cdn.pixabay.com/photo/2017/06/26/11/17/waves-2452369_1280.png') repeat-x;
+  animation: wave-animation 4s linear infinite;
+  z-index: 1;
+}
+
+.wave-2 {
+  top: 30px;
+  opacity: 0.5;
+  animation: wave-animation 4s linear infinite reverse;
+}
+
+@keyframes wave-animation {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+.form-container {
+  background: black;
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 03s ease;
+}
+
+button:hover{
+  background-color: #0056b3;
+}
+
+.text{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.text a{
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text a:hover{
+  text-decoration: underline;
+}
